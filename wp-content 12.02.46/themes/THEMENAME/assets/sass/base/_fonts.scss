@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'optima';
+    src: url('../fonts/optima.woff');
+}
+
+@font-face {
+    font-family: 'optima-bold';
+    src: url('/assets/fonts/optima_bold.woff');
+}
+
+@font-face {
+    font-family: 'optima-italic';
+    src: url('/assets/fonts/optima_italic.woff');
+}
+
+@font-face {
+    font-family: 'optima-medium';
+    src: url('/assets/fonts/optima_medium.woff');
+}
+
+$font-regular: 'optima', sans-serif;
+$font-medium: 'optima-medium', sans-serif;
+$font-italic: 'optima-italic', sans-serif;
+$font-bold: 'optima-bold', sans-serif;
+
+$font-body: "collier", sans-serif;

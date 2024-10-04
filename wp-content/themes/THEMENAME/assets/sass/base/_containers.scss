@@ -11,13 +11,17 @@
     left: 0;
 
     &--full {
-        max-width: 100%;
-    }
-
-    &--full {
         height: 100vh;
         max-height: 100vh;
         justify-content: start;
+    }
+
+    &--grey {
+        background: $light-grey;
+    }
+
+    &--black {
+        background: $slate;
     }
 
     @include md {
@@ -33,6 +37,9 @@
         flex-direction: column;
         flex-wrap: wrap;
         overflow: hidden;
+        &--narrow {
+            max-width: calc($container-inner-maxwidth - 200px);
+        }
         @include md {
             flex-direction: row;
             padding: $container-inner-pad;
@@ -57,6 +64,12 @@
         width: 100%;
     }
 
+    @include sm {
+        &--4 {
+            width: 48%;
+        }
+    }
+
     @include md {
         flex-direction: row;
         &__col {
@@ -67,7 +80,10 @@
                 width: 31%;
             }
             &--4 {
-                width: 23%;
+                width:23%;
+            }
+            &--5 {
+                width: 18%;
             }
             &--1of3 {
                 width: 31%;

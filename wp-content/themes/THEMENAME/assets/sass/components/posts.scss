@@ -1,0 +1,79 @@
+.posts {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0 0 0;
+        align-self: end;
+        h3 {
+            transform: rotate(-90deg);
+            position: relative;
+            height: fit-content;
+            width: fit-content;
+            font-size: 2rem;
+            margin-left: -1.5rem;
+            padding-bottom: 1.5rem;
+            &::after {
+                position: absolute;
+                content: '';
+                height: 5px;
+                width: 50px;
+                background: $primary;
+                left: 0rem;
+                bottom: 0;
+            }
+        }
+        p{
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__post {
+        // align-content: end;
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 1.5rem;
+        }
+        a {
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-left: 3rem;
+            h4, p {
+                text-decoration: none !important;
+                color: $slate;
+                margin: 0;
+            }
+            p {
+                margin-top: 1rem;
+                font-size: .8rem;
+            }
+            &::before {
+                content: '';
+                background: $slate;
+                width: 5px;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                transition: .25s ease-in-out;
+            }
+            &:hover {
+                &::before {
+                    background: $primary;
+                }
+            }
+        }
+    }
+
+    @include md {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+    }
+}

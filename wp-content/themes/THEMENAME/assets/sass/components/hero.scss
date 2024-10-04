@@ -1,0 +1,119 @@
+.hero {
+    height: calc(100vh - 50px);
+    min-height: 700px;
+    position: relative;
+    &__dot {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 450px;
+        height: 450px;
+        border-radius: 500px;
+        margin-top: 12rem;
+        background: rgba(0,0,0,.8);
+        color: white;
+        justify-content: center;
+        h1 {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            font-size: 1rem;
+            letter-spacing: 4px;
+            padding: 1.5rem 1rem 0;
+            position: relative;
+            transition: .25s ease-in-out;
+            @include md {
+                padding: 1.5rem 0 0 0 ;
+                font-size: 1.75rem;
+                width: 380px;
+            }
+        }
+        p {
+            width: 200px;
+            margin: 0 auto;
+            margin-top: 1.5rem;
+            border-left: 3px solid;
+            padding-left: 1.5rem;
+            transition: .25s ease-in-out;
+        }
+
+        &--active {
+            h1 {
+                transform: rotate(-90deg);
+                margin-left: -1.5rem;
+                margin-bottom: -7rem;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    bottom: -1rem;
+                    width: 50px;
+                    height: 4px;
+                    content: '';
+                    background: white;
+                }
+            }
+            p {
+                color: transparent;
+            }
+        }
+    }
+    &__caption {
+        position: absolute;
+        background: $slate;
+        color: $white;
+        padding: 1.5rem;
+        z-index: 2;
+        &--left {
+            transform: rotate(-90deg);
+            bottom: 11.1rem;
+            left: -12rem;
+            width: 400px;
+            text-align: right;
+            p {
+                padding-left: 7rem;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+        &--bottomleft {
+            left: 0;
+            bottom: -2rem;
+            background: $light-grey;
+            color: $slate;
+            margin: 0 auto;
+            width: 100%;
+            p {
+                border-left: 4px solid $slate;
+                padding-left: 1.5rem;
+                @include md {
+                    margin-left: 150px;
+                }
+            }
+            @include md {
+                margin: unset;
+                max-width: 45%;
+            }
+        }
+        &--bottomright {
+            bottom: -2rem;
+            right: 0;
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+            p {
+                padding: 0rem 2.5rem;
+                margin: 0;
+                text-align: center;
+            }
+            @include md {
+                left: unset;
+                margin: unset;
+                right: 5rem;
+                width: fit-content;
+                p {
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.button {
+    padding: 1rem 2rem;
+    font-weight: bold;
+    background: $slate;
+    color: $white;
+    transition: .25s ease-in-out;
+    text-decoration: none;
+    letter-spacing: unset;
+    border: 1px solid $slate;
+    &:hover {
+        background: $white;
+        color: $slate;
+    }
+    &--white {
+        background: $white;
+        color: $slate;
+        border: 1px solid $white;
+        &:hover {
+            background: $slate;
+            color: $white;
+        }
+    }
+    &--transparent {
+        margin: 0 auto;
+        font-weight: bold;
+        text-decoration: underline;
+        color: $slate;
+        font-size: 1rem;
+        background: transparent;
+        border: none;
+        &:hover {
+            font-weight: bold;
+            font-size: calc(1rem + 1px);
+            background: unset;
+        }
+    }
+    &--left {
+        margin: unset;
+        text-align: left;
+        padding-left: 0;
+        width: fit-content;
+    }
+}

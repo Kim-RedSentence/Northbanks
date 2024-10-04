@@ -14,17 +14,56 @@
     <script src="https://kit.fontawesome.com/23b2a3419b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/jnc7wra.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/new.css"/>
 </head>
 <body>
-
-  <nav class="<?php echo $vars; ?>">
-      <?php
-      wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'container' => 'nav',
-        'container_class' => 'nav',
-        'menu_class' => 'nav__menu',
-      ));
-    ?>
-  </nav>
+  
+<?php 
+  $headLogo = get_field('logo_dark', 'options');
+  $email = get_field('contact_email', 'options');
+  $number = get_field('contact_number', 'options');
+?>
+<div class="topbar container">
+  <div class="container__inner cols">
+    <div class="topbar__logo cols__col--2">
+      <a href="/"><img src="<?php echo $headLogo['url']; ?>" alt="<?php echo $headLogo['alt']; ?>"></a>
+    </div>
+    <div class="topbar__right cols__col--2">
+      <div class="topbar__button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav">
+          <?php
+            wp_nav_menu(array(
+              'theme_location' => 'primary',
+              'container' => '',
+              'container_class' => 'nav__container',
+              'menu_class' => 'nav__menu',
+            ));
+          ?>
+          <div class="nav__contact">
+            <ul>
+              <li><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+              <li><a href="tel:<?php echo $number; ?>"><?php echo $number; ?></a></li>
+            </ul>
+        </div>
+        <div class="nav__socials">
+          <span>
+            <ul>
+              <li>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </span>
+          <span>
+            <a class="button button--white" href="">Lets get together</a>
+          </span>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

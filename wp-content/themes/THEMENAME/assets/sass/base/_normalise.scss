@@ -29,7 +29,14 @@ h2 {
     font-size: 1rem;
 }
 
-p {
+p, a {
     font-size: .9rem;
     font-family: $font-body;
+    font-weight: light;
+    letter-spacing: 4.2px;
+    transition: .25s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline !important;
 }

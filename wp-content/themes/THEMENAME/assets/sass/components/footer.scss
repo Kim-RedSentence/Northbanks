@@ -1,0 +1,90 @@
+.footer {
+    padding-top: 2rem;
+
+    &__logo {
+        margin: 0 auto;
+        padding-top: 5rem;
+    }
+
+    &__menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                padding-bottom: .5rem;
+                text-align: center;
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+    }
+
+    &__social {
+        p {
+            color: $white;
+            margin: 0;
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+        p:last-child {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__promo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        img {
+            object-fit: contain;
+            object-position: top;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            li {
+                padding-bottom: .4rem;
+                a {
+                    i {
+                        color: white;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include md {
+        padding-top: 3rem;
+        &__logo {
+            padding-top: 0;
+            margin: unset;
+        }
+        &__menu {
+            padding-left: 2rem;
+            ul {
+                li {
+                    text-align: left;
+                }
+            }
+        }
+        &__social {
+            p {
+                text-align: left;
+            }
+        }
+    }
+}

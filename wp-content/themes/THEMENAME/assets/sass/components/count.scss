@@ -1,0 +1,90 @@
+.count {
+    padding: 8rem 1.5rem 4rem;
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: lighter;
+        @include sm {
+            padding: 0 2rem;
+        }
+    }
+
+    &__inner {
+        display: none;
+        &--slick {
+            display: flex;
+            max-width: 100%;
+            overflow: hidden;
+            flex-direction: column;
+            .slick-dots{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 0 auto;
+                padding: 1rem 0 0 0;
+                bottom: 0;
+                li {
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50px;
+                    background: $white;
+                    transition: .25s ease-in-out;
+                    button {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                li.slick-active, li:hover {
+                    background: $primary;
+                }
+            }
+        }
+        @include md {
+            display: flex;
+
+            &--slick {
+                display: none;
+            }
+        }
+    }
+        &__item {
+            // border-bottom: 1px solid $white;
+            padding: 3rem 0;
+            h3, h4, p {
+                color: $white;
+                text-align: center;
+                letter-spacing: unset;
+            }
+            h3 {
+                font-size: 4.5rem;
+                font-weight: lighter;
+                margin: 0;
+                letter-spacing: 6px;
+            }
+            h4 {
+                color: $primary;
+                font-size: 0.875rem;
+                letter-spacing: 2.8px;
+                margin: 1.5rem 0;
+            }
+            p {
+                max-width: 266px;
+                margin: 0 auto;
+            }
+        }
+
+        @include md {
+            // &__item {
+            //     border-bottom: none;
+            // }
+            &__item:nth-child(3n + 2) {
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+        }
+
+}

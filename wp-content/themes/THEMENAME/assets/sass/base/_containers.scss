@@ -24,6 +24,15 @@
         background: $slate;
     }
 
+    &--layertop {
+        top: -3rem;
+        margin-bottom: -3rem;
+        @include md {
+            top: -5rem;
+            margin-bottom: -5rem;
+        }
+    }
+
     @include md {
         flex-direction: row;
     }
@@ -55,18 +64,37 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    row-gap: 1.5rem;
+    // column-gap: 2.5rem;
 
     &--mob-invert {
         flex-direction: column-reverse;
     }
 
+    &--row {
+        flex-direction: row;
+    }
+
     &__col {
         width: 100%;
+        &--heroleft {
+            width: 85px;
+        }
+        &--heroright {
+            // width: calc(100% - 50px);
+            width: 100%;
+        }
     }
 
     @include sm {
         &--4 {
             width: 48%;
+        }
+        &--heroleft {
+            width: 31%;
+        }
+        &--heroright {
+            width: 62%;
         }
     }
 
@@ -91,7 +119,13 @@
             &--2of3 {
                 margin-right: 2.5rem;
                 width: 62%;
+            }    
+            &--heroleft {
+                width: 31%;
             }
+            &--heroright {
+                width: 62%;
+            }        
         }
     }
 }

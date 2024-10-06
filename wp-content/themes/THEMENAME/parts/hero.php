@@ -28,12 +28,12 @@ $subtitle = get_sub_field('hero_subtitle');
         </div>
     </div>
 <?php else : ?>
-    <div class="hero container cols">
-        <div class="hero__halftitle cols__col--1of3">
+    <div class="hero hero__split container cols">
+        <div class="hero__halftitle cols__col--heroleft">
             <h1><?php echo $title;?></h1>
         </div>
-        <div class="hero__halfimg cols__col--2of3">
-
+        <div class="hero__halfimg cols__col--heroright">
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
         </div>
     </div>
 <?php endif; ?>

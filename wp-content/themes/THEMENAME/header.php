@@ -8,11 +8,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script src="https://kit.fontawesome.com/23b2a3419b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/jnc7wra.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css"/>
 </head>
 <body>
@@ -23,11 +25,19 @@
   $number = get_field('contact_number', 'options');
 ?>
 <div class="topbar container">
-  <div class="container__inner cols">
-    <div class="topbar__logo cols__col--2">
+  <div class="container__inner cols cols--row">
+    <div class="topbar__logo">
       <a href="/"><img src="<?php echo $headLogo['url']; ?>" alt="<?php echo $headLogo['alt']; ?>"></a>
     </div>
-    <div class="topbar__right cols__col--2">
+    <div class="topbar__right">
+      <div class="topbar__contact">
+        <ul>
+          <li><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+          <li><a href="tel:<?php echo $number; ?>"><?php echo $number; ?></a></li>
+        </ul>
+        <a href="<?php the_field('linkedin', 'options');?>"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="<?php the_field('instagram', 'options'); ?>"><i class="fa-brands fa-instagram"></i></a>
+      </div>
       <div class="topbar__button">
         <span></span>
         <span></span>

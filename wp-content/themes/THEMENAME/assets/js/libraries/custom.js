@@ -11,4 +11,14 @@ $jq(document).ready(function(){
         $title.toggleClass('hero__dot--active')
     });
 
-});
+    $jq('.count__inner--slick').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: false,
+        dots: true,
+        arrows: false
+    });
+
+
+}); //end of ready

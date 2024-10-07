@@ -34,7 +34,4 @@ function work_post_type() {
 	);
 }
 add_action('init', 'work_post_type');
-
-
 ?>
-

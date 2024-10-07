@@ -1,0 +1,88 @@
+.blogs {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &__inner {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        @include sm {
+            width: 43%;
+        }
+
+        &--inner {
+            margin: 2rem 0 ;
+            padding-left: 2rem;
+            border-left: 5px solid $slate;
+            a {
+                font-weight: bold;
+                color: $slate;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                display: flex;
+                align-self: end;
+            }
+        }
+    }
+
+    &__sidebar {
+        width: 100%;
+    }
+
+    @include md {
+        &__inner {
+            flex-direction: row;
+        }
+        &__list {
+            width: 70%;
+        }
+        &__sidebar {
+            width: 20%;
+        }
+    }
+}
+
+.bfilter {
+    &__socials, &__recommended, &__category, &__tag {
+        p {
+            padding-top: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+    &__socials {
+        ul {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: start;
+            li {
+                margin-right: 1.5rem;
+                a {
+                    font-size: 3rem;
+                    color: $slate;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

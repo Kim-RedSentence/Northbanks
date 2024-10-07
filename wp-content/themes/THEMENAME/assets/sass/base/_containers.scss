@@ -49,6 +49,12 @@
         &--narrow {
             max-width: calc($container-inner-maxwidth - 200px);
         }
+
+
+        &--overflow {
+            overflow: unset;
+        }
+
         @include md {
             flex-direction: row;
             padding: $container-inner-pad;

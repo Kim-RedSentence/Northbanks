@@ -1,0 +1,151 @@
+.fpost {
+    display: flex;
+    flex-direction: column;
+
+    &__filters {
+        width: 100%;
+        padding-bottom: 3rem;
+        @include md {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    &__filter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        p {
+            margin: .5rem 0;
+            width: 100%;
+        }
+        label {
+            color: $primary;
+            margin-right: 1.5rem;
+            transition: .25s ease-in-out;
+            input {
+                display: none;
+                &:checked + span {
+                    color: $slate;
+                 }
+            }
+            &:hover {
+                color: $slate;
+            }
+        }
+    }
+    &__info {
+        width: 100%;
+    }
+    &__title {
+        // top: 30%;
+        width: 30%;
+        @include md {
+            width: 27%;
+
+        }
+        &--inner {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5rem 1rem;
+            flex-wrap: wrap;
+            h1 {
+                transform: translate(-2em, 0) rotate(-0.25turn);
+                font-size: 3.5rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #fff;
+                position: relative;
+                margin: 10rem 0 0 4rem;
+                &::after {
+                    position: absolute;
+                    width: 100px;
+                    height: 5px;
+                    content: "";
+                    left: 0rem;
+                    bottom: -1rem;
+                    background: #ed7480;
+                }
+            }
+            span {
+                padding-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                p {
+                    color: white;
+                }
+            }
+        }
+    }
+    &__sliders {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        row-gap: 1.5rem;
+    }
+    &__accent {
+        position: absolute;
+        top: 2rem;
+        left: -2rem;
+        width: 200%;
+        height: 100%;
+        content: '';
+        background: $slate;
+        @include md {
+            width: 55%;
+            left: -10rem;
+        }
+    }
+    &__slider, &__lowerslider {
+        display: flex;
+        max-width: 100%;
+        overflow: hidden;
+        flex-direction: column;
+        gap: 1.5rem;
+
+    }
+
+    &__slider {
+        width: 50%;
+        @include md {
+            width: 71%;
+        }
+    }
+    &__lowerslider {
+        margin-top: 1.5rem;
+        width: 100%;
+        @include md {
+            display: flex;
+            width: 90%;
+            margin-left: -3rem;
+        }
+    }
+
+    &__slide {
+        margin-right: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        img {
+            object-fit: cover;
+            width: 100%;
+            object-position: left center;
+        }
+        h2 {
+            background: rgba(0,0,0,.5);
+            transform: rotate(-0.25turn);
+            position: absolute;
+            bottom: 3.8rem;
+            left: -5rem;
+            color: #fff;
+            padding: 1rem;
+            transition: .25s ease-in-out;
+        }
+        a:hover {
+            h2 {
+                background: rgba(0,0,0,.8);
+            }
+        }
+    }
+}

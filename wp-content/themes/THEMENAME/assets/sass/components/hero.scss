@@ -38,6 +38,14 @@
             transition: .25s ease-in-out;
         }
 
+        a {
+            text-align: center;
+            padding-top: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $white;
+        }
+
         &--active {
             h1 {
                 transform: rotate(-90deg);
@@ -53,7 +61,7 @@
                     background: white;
                 }
             }
-            p {
+            p,a {
                 color: transparent;
             }
         }

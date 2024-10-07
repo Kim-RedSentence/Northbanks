@@ -10,7 +10,9 @@
         letter-spacing: 4px;
     }
     p {
-        font-size: 0.875rem;
+        font-size: 01rem;
+        max-width: 256px;
+        letter-spacing: unset;
     }
     &__form {
         >div {

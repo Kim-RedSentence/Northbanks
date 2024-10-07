@@ -25,7 +25,7 @@ $count = 1;
             while( have_rows('count_repeater') ) : the_row();
                 $subtitle = get_sub_field('count_subtitle');
                 $body = get_sub_field('count_body'); ?>
-                <div class="count__item cols__col--3">
+                <div class="count__item cols__col cols__col--3">
                     <h3>0<?php echo $count; ?></h3>
                     <h4><?php echo $subtitle; ?></h4>
                     <p><?php echo $body; ?></p>

@@ -1,0 +1,6 @@
+.spacer {
+    height: 5rem;
+    @include md {
+        height: 8rem;
+    }
+}

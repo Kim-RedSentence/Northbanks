@@ -8,7 +8,7 @@
             else: 
                 $client = get_field('default_image', 'options');
             endif; ?> 
-                <img class="cols__col--4 clients__client" src="<?php echo $client['url']; ?>" alt="<?php echo $client['alt']; ?>">
+                <img class="cols__col cols__col--4 clients__client" src="<?php echo $client['url']; ?>" alt="<?php echo $client['alt']; ?>">
             <?php endwhile; ?>
         <?php endif; ?>
     </div>

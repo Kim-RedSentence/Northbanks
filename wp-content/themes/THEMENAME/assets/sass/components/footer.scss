@@ -67,6 +67,13 @@
         }
     }
 
+    &__legal {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1rem 2rem 1rem;
+        color: $white;
+    }
+
     @include md {
         padding-top: 3rem;
         &__logo {
@@ -84,6 +91,64 @@
         &__social {
             p {
                 text-align: left;
+            }
+        }
+    }
+}
+
+.prefooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1.5rem 1rem;
+    h3 {
+        position: relative;
+        transform: rotate(-90deg);
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        &::after {
+            background: #ed7480;
+            width: 50px;
+            height: 5px;
+            position: absolute;
+            bottom: -1rem;
+            left: 0rem;
+            display: block;
+            content: '';
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        p {
+            letter-spacing: unset;
+        }
+
+        .gform_wrapper {
+            form {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: end;
+            }
+        }
+
+        .gform_footer {
+            input {
+                background: $light-grey !important;
+            }
+        }
+
+        @include md {
+            flex-direction: row;
+
+            .ginput_container {
+                background: $light-grey !important;
+                margin-right: 1.5rem !important;
+                margin-left: 1rem !important;
             }
         }
     }

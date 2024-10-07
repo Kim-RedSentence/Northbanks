@@ -4,9 +4,11 @@
     if (get_field('show_footer_form')): ?>
     <div class="container container--grey">
         <div class="container__inner prefooter">
-        <h3>Keep in touch</h3>
-        <p>Subscribe to our newsletter for latest news and industry trends.</p>
-        <?php the_field('footer_form', 'options') ?>
+            <h3>Keep <br />in <br />touch</h3>
+            <div class="prefooter__form">
+                <p>Subscribe to our newsletter for latest news and industry trends.</p>
+                <?php the_field('footer_form', 'options') ?>
+            </div>
         </div>
     </div>
     <?php endif; ?>

@@ -13,4 +13,28 @@ register_nav_menus( array(
 
 ) );
 
+function work_post_type() {
+	register_post_type('case_studies',
+		array(
+			'labels'      => array(
+				'name'          => __('Case Studies', 'textdomain'),
+				'singular_name' => __('Case Study', 'textdomain'),
+                
+			),
+            'args'            => array (
+                'menu_icon'     => 'dashicons-text-page',
+            ),
+            'taxonomies'  => array( 'category' ),
+            'supports'        => array( 
+                'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'
+            ),
+				'public'      => true,
+				'has_archive' => true,
+		)
+	);
+}
+add_action('init', 'work_post_type');
+
+
 ?>
+

@@ -22,12 +22,14 @@ $subtitle = get_sub_field('hero_subtitle');
             <p><?php echo $caption; ?></p>
         </div>
     <?php endif; ?>       
+    <?php if (get_sub_field('hero__title')): ?>
         <div class="hero__dot">
             <h1><?php echo $title;?></h1>
             <?php if (get_sub_field('hero_subtitle')):?>
             <p><?php echo $subtitle; ?></p>
             <?php endif; ?>
         </div>
+    <?php endif; ?>
     </div>
 <?php else : ?>
     <div class="hero hero__split container cols">

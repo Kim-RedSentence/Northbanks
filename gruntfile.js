@@ -7,7 +7,7 @@ module.exports = function(grunt) {
               style: 'compressed'
           },
           files: {
-            'wp-content/themes/THEMENAME/assets/css/style.css' : ['wp-content/themes/THEMENAME/assets/sass/style.scss']
+            'wp-content/themes/Northbanks/assets/css/style.css' : ['wp-content/themes/Northbanks/assets/sass/style.scss']
           }
       }
   },
@@ -18,20 +18,20 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'wp-content/themes/THEMENAME/assets/js/main.js' : ['wp-content/themes/THEMENAME/assets/js/libraries/*.js']
+          'wp-content/themes/Northbanks/assets/js/main.js' : ['wp-content/themes/Northbanks/assets/js/libraries/*.js']
         }
       }
     },
     watch: {
       css : {
         files: [
-          'wp-content/themes/THEMENAME/assets/css/style.css' , 'wp-content/themes/THEMENAME/assets/sass/**/*.scss'],
+          'wp-content/themes/Northbanks/assets/css/style.css' , 'wp-content/themes/Northbanks/assets/sass/**/*.scss'],
           // tasks: ['newer:sass']
           tasks: ['sass']
         },
 
       js : {
-        files: 'wp-content/themes/THEMENAME/assets/js/libraries/*.js',
+        files: 'wp-content/themes/Northbanks/assets/js/libraries/*.js',
         tasks: ['uglify']
       },
       options: {

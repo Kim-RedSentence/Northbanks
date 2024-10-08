@@ -79,8 +79,8 @@ $tag_query = !empty($selected_tags) ? implode(',', $selected_tags) : '';
                             <div class="blogs__item--inner">
                                 <h2><?php the_title(); ?></h2>
                                 <p><?php the_excerpt(); ?></p>
-                                <a href="<?php the_permalink(); ?>">Read on</a>      
-                          </div>
+                                <a href="<?php the_permalink(); ?>">Read on</a>
+                            </div>
                         </div>
                         <?php
                     endwhile;
@@ -103,17 +103,29 @@ $tag_query = !empty($selected_tags) ? implode(',', $selected_tags) : '';
 
 
                         <div class="bfilter__socials">
-                        <p>Follow Us:</p>
-                        <ul>
-                            <li><a href="<?php the_field('linkedin', 'options'); ?>"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                            <li><a href="<?php the_field('instagram', 'options'); ?>"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
+                            <p>Follow Us:</p>
+                            <ul>
+                                <li><a href="<?php the_field('linkedin', 'options'); ?>"><i
+                                            class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                                <li><a href="<?php the_field('instagram', 'options'); ?>"><i
+                                            class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
 
-                        <div class="bfilter__recommended">
-                        <p>Our Picks:</p>
-
-                        </div>
+                        <?php if (get_field('blogs__recommended')): ?>
+                            <div class="bfilter__recommended">
+                                <p>Our Picks:</p>
+                                <ul>
+                                    <?php if (have_rows('repeater_field_name')):
+                                        while (have_rows('repeater_field_name')):
+                                            the_row();
+                                            $link = get_sub_field('blog_rec'); ?>
+                                            <li><a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a></li>
+                                        <?php endwhile;
+                                    endif; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
 
                         <div class="bfilter__category">
                             <p>Categories:</p>
@@ -124,8 +136,8 @@ $tag_query = !empty($selected_tags) ? implode(',', $selected_tags) : '';
                                 $checked = in_array($category->slug, $selected_categories) ? 'checked' : '';
                                 echo '<label>';
                                 echo '<input onChange="this.form.submit()" type="checkbox" name="category[]" value="' . esc_attr($category->slug) . '" ' . $checked . '>';
-                                echo esc_html($category->name);
-                                echo '</label><br>';
+                                echo '<span>' . esc_html($category->name) . '</span>';
+                                echo '</label>';
                             }
                             ?>
                         </div>
@@ -139,8 +151,8 @@ $tag_query = !empty($selected_tags) ? implode(',', $selected_tags) : '';
                                 $checked = in_array($tag->slug, $selected_tags) ? 'checked' : '';
                                 echo '<label>';
                                 echo '<input onChange="this.form.submit()" type="checkbox" name="tag[]" value="' . esc_attr($tag->slug) . '" ' . $checked . '>';
-                                echo esc_html($tag->name);
-                                echo '</label><br>';
+                                echo '<span>' . esc_html($tag->name) . '</span>';
+                                echo '</label>';
                             }
                             ?>
                         </div>

@@ -1,0 +1,22 @@
+.fw {
+    &__main {
+        width: 90%;
+        position: relative;
+        h1 {
+            width: 100%;
+            text-align: left;
+        }
+        @include md {
+            h1 {
+                position: absolute;
+                width: unset;
+                transform: rotate(-90deg);
+                left: -5rem;
+                top: 0;
+            }
+        }
+    }
+    &__sidebar {
+        width: 10%;
+    }
+}

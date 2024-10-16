@@ -22,7 +22,7 @@ $subtitle = get_sub_field('hero_subtitle');
             <p><?php echo $caption; ?></p>
         </div>
     <?php endif; ?>       
-    <?php if (get_sub_field('hero__title')): ?>
+    <?php if (get_sub_field('hero_title')): ?>
         <div class="hero__dot">
             <h1><?php echo $title;?></h1>
             <?php if (get_sub_field('hero_subtitle')):?>

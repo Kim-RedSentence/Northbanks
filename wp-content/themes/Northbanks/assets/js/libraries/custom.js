@@ -20,6 +20,39 @@ $jq(document).ready(function(){
         arrows: false
     });
 
+    // $jq('.orbital__slider').slick({
+    //     infinite: true,
+    //     centerMode: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     draggable: false,
+    //     dots: false,
+    //     arrows: false,
+    //     focusOnSelect: true,
+    //     fade: true,
+    // }); this slider is driving me insane. come back to this after lunch
+
+
+    $jq('.orbital__slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows:false,
+        autoplay: false,
+        autoplaySpeed: 8000,
+        fade: true,
+        speed: 700
+      });
+       
+      
+       $jq('a[data-slide]').click(function(e) {
+         e.preventDefault();
+         var slideno = $jq(this).data('slide');
+         $jq('.orbital__slider').slick('slickGoTo', slideno - 1);
+       });
+
+
     $jq('.fpost__info').slick({
         infinite: true,
         slidesToShow: 1,
@@ -69,10 +102,19 @@ $jq(document).ready(function(){
             }
         ]
     });
+
+    $jq('.fpost__label').on('click', function() {
+        var listItemCount = $jq('.fpost__lowerslider').children('div').length;
+        console.log(listItemCount);
+        if (listItemCount < 3) {
+            $jq('.fpost__lowerslider').addClass('fpost__lowerslider--hidden');
+        } else {
+            $jq('.fpost__lowerslider').removeClass('fpost__lowerslider--hidden');
+
+        }
+
+    });
+
     
-
-
-
-
 
 }); //end of ready

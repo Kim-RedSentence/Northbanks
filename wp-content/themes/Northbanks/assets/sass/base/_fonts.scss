@@ -1,7 +1,7 @@
-// @font-face {
-//     font-family: 'optima';
-//     src: url('../fonts/optima.woff');
-// }
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
 
 // @font-face {
 //     font-family: 'optima-bold';
@@ -24,3 +24,4 @@ $font-italic: Helvetica, sans-serif;
 $font-bold: Helvetica, sans-serif;
 
 $font-body: Helvetica, sans-serif;
+$header-font: 'bebas', sans-serif;

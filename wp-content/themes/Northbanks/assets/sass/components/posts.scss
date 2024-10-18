@@ -7,8 +7,8 @@
         padding: 2rem 0 0 0;
         align-self: end;
         h3 {
-            // transform: rotate(-90deg);
-            writing-mode: sideways-lr;
+            transform: rotate(-90deg);
+            // writing-mode: sideways-lr;
             position: relative;
             height: fit-content;
             width: fit-content;
@@ -19,11 +19,11 @@
             &::after {
                 position: absolute;
                 content: '';
-                height: 50px;
-                width: 5px;
+                width: 50px;
+                height: 5px;
                 background: $primary;
-                right: -1rem;
-                bottom: 0;
+                bottom: -1rem;
+                left: 0;
             }
         }
         p{

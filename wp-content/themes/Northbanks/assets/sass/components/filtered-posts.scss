@@ -61,14 +61,15 @@
                 position: relative;
                 margin: 8rem 0 0 -.4rem;
                 line-height: 1;
-                writing-mode: sideways-lr;
+                // writing-mode: sideways-lr;
+                transform: rotate(-90deg);
                 &::after {
                     position: absolute;
-                    width: 5px;
-                    height: 45%;
+                    height: 5px;
+                    width: 45%;
                     content: "";
-                    right: -1rem;
-                    bottom: .4rem;
+                    bottom: -1rem;
+                    left: .4rem;
                     background: #ed7480;
                 }
             }

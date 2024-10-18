@@ -10,8 +10,8 @@
             h1 {
                 position: absolute;
                 width: unset;
-                // transform: rotate(-90deg);
-                writing-mode: sideways-lr;
+                transform: rotate(-90deg);
+                // writing-mode: sideways-lr;
                 left: 0;
                 top: 0;
             }

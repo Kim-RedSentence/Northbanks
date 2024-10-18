@@ -33,15 +33,16 @@
                 max-height: 500px;
             }
             h2 {
-                writing-mode: vertical-rl;
+                // writing-mode: vertical-rl;
+                transform: rotate(-90deg);
                 margin: 0;
                 position: absolute;
-                bottom: 0;
                 left: 0;
                 color: #fff;
                 padding: 1rem;
-                background: rgba(0,0,0, .6);
+                background: rgba(0,0,0,.6);
                 font-size: 3rem;
+                transform-origin: left top;
             }
         }
         h4 {

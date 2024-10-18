@@ -18,8 +18,12 @@
         p {
             margin: .5rem 0;
             width: 100%;
+            font-family: $font-regular;
+            font-weight: bold;
+            font-size: 1.25rem;
         }
         label {
+            font-family: $font-regular;
             color: $primary;
             margin-right: 1.5rem;
             transition: .25s ease-in-out;
@@ -50,20 +54,21 @@
             padding: 1.5rem 1rem;
             flex-wrap: wrap;
             h1 {
-                transform: translate(-2em, 0) rotate(-0.25turn);
                 font-size: 3.5rem;
                 text-transform: uppercase;
                 letter-spacing: 3px;
                 color: #fff;
                 position: relative;
-                margin: 10rem 0 0 4rem;
+                margin: 8rem 0 0 -.4rem;
+                line-height: 1;
+                writing-mode: sideways-lr;
                 &::after {
                     position: absolute;
-                    width: 100px;
-                    height: 5px;
+                    width: 5px;
+                    height: 45%;
                     content: "";
-                    left: 0rem;
-                    bottom: -1rem;
+                    right: -1rem;
+                    bottom: .4rem;
                     background: #ed7480;
                 }
             }
@@ -134,11 +139,12 @@
         }
         h2 {
             background: rgba(0,0,0,.5);
-            transform: rotate(-0.25turn);
+            writing-mode: sideways-lr;
             position: absolute;
-            bottom: 3.8rem;
-            left: -5rem;
+            bottom: .4rem;
+            left: 0;
             color: #fff;
+            margin: 0;
             padding: 1rem;
             transition: .25s ease-in-out;
         }

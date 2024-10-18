@@ -1,0 +1,57 @@
+.cs {
+    &__title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &--inner {
+            position: relative;
+            width: 100%;                
+            padding-top: 45%;
+            h2 {
+                writing-mode: sideways-lr;
+                width: fit-content;
+                z-index: 1;
+                position: relative;
+                font-size: 3rem;
+                line-height: 1;
+                margin: 0;
+                margin-left: -.4rem;
+
+                &::after {
+                    position: absolute;
+                    right: -1rem;
+                    bottom: 0;
+                    height: 50%;
+                    width: 5px;
+                    background-color: $primary;
+                    content: '';
+                }
+            }
+        }
+
+        &::after {
+            position: absolute;
+            left: -10rem;
+            bottom: 0;
+            height: 90%;
+            background-color: #ececec;
+            width: calc(100vw + 10rem);
+            content: '';
+            @include md {
+                width: calc(50vw + 10rem);
+            }
+        }
+    }
+    &__inner{
+        position: relative;
+        z-index: 1;
+        padding: 1.5rem 0;
+        a {
+            // font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+    &__slider {
+
+    }
+}

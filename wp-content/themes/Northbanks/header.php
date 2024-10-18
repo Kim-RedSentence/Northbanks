@@ -27,7 +27,7 @@
 <div class="topbar container">
   <div class="container__inner cols cols--row">
     <div class="topbar__logo">
-      <a href="/"><img src="<?php echo $headLogo['url']; ?>" alt="<?php echo $headLogo['alt']; ?>"></a>
+      <a href="/nb"><img src="<?php echo $headLogo['url']; ?>" alt="<?php echo $headLogo['alt']; ?>"></a>
     </div>
     <div class="topbar__right">
       <div class="topbar__contact">

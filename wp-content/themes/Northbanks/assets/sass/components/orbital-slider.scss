@@ -6,6 +6,21 @@
         margin-top: 5rem;
     }
 
+    &__slidelink {
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        padding-top: 3.5rem;
+        color: $slate;
+        text-decoration: none;
+        border-bottom: 1px solid $slate;
+        transition: .25s ease-in-out;
+        &:hover {
+            border-bottom: 2px solid $slate;
+        }
+    }
+
     &__slide {
         max-width: 100%;
         height: auto;
@@ -26,7 +41,11 @@
                 color: #fff;
                 padding: 1rem;
                 background: rgba(0,0,0, .6);
+                font-size: 3rem;
             }
+        }
+        h4 {
+            font-size: 2rem;
         }
         h4, p {
             width: 100%;

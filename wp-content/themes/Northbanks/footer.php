@@ -15,7 +15,7 @@
     <footer class="container container--black footer">
         <div class="container__inner cols">
             <div class="footer__logo cols__col--4">
-                <a href="/"><img src="<?php echo $footerLogo['url']; ?>" alt="<?php echo $footerLogo['alt']; ?>"></a>
+                <a href="/nb"><img src="<?php echo $footerLogo['url']; ?>" alt="<?php echo $footerLogo['alt']; ?>"></a>
             </div>
             <div class="footer__menu cols__col--4">
             <?php

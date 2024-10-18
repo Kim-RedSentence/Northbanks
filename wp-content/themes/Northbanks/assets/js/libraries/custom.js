@@ -32,6 +32,26 @@ $jq(document).ready(function(){
     //     fade: true,
     // }); this slider is driving me insane. come back to this after lunch
 
+    $jq('.cs__info').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        draggable: false,
+        fade: true,
+    });
+
+    $jq('.cs__slider').slick ({ 
+        draggable: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        asNavFor: '.cs__info',
+    });
 
     $jq('.orbital__slider').slick({
         infinite: true,

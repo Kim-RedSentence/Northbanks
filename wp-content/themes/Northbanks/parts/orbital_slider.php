@@ -62,6 +62,8 @@
                     <p><?php the_sub_field('op4_body'); ?></p>
                 </div>
             </div>
+            <?php $link = get_sub_field('ob_slider_link'); ?>
+            <a class="orbital__slidelink" href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
         </div>
 
         <div class="cols__col cols__col--4 orbital__nav orbital__nav--right">
